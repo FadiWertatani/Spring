@@ -8,5 +8,4 @@ import tn.esprit.sleam.entity.Bloc;
 public interface IBlocRepo extends JpaRepository<Bloc, Long> {
     Bloc findBlocByNomColumn(String nomBloc);
 
-
 }

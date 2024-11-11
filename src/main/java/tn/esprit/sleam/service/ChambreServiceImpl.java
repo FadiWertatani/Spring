@@ -17,6 +17,7 @@ import java.util.List;
 public class ChambreServiceImpl implements IChambreService{
     IChambreRepo chambreRepo;
     IBlocRepo blocRepo;
+    List<Chambre> chambreList = null;
 
     @Override
     public Chambre ajoutChambre(Chambre chambre) {
@@ -27,7 +28,6 @@ public class ChambreServiceImpl implements IChambreService{
     public List<Chambre> affectBlocToChambre(List<Long> numChambres, String nomBloc) {
         //La recuperation
         Bloc bloc = blocRepo.findBlocByNomColumn(nomBloc);
-        List<Chambre> chambreList = null;
         for(int i=0;i<numChambres.size();i++){
             chambreList.add(chambreRepo.findChambreByNumChambre(numChambres.get(i)));
         }

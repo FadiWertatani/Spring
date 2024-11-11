@@ -10,6 +10,7 @@ import java.util.Set;
 @Getter
 @Setter
 public class Bloc {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long idBloc;
 
