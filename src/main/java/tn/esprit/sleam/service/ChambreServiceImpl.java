@@ -1,5 +1,7 @@
 package tn.esprit.sleam.service;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.sleam.entity.Bloc;
 import tn.esprit.sleam.entity.Chambre;
 import tn.esprit.sleam.entity.Cours;
@@ -10,9 +12,17 @@ import tn.esprit.sleam.repository.IUserRepo;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class ChambreServiceImpl implements IChambreService{
     IChambreRepo chambreRepo;
     IBlocRepo blocRepo;
+
+    @Override
+    public Chambre ajoutChambre(Chambre chambre) {
+        return chambreRepo.save(chambre);
+    }
+
     @Override
     public List<Chambre> affectBlocToChambre(List<Long> numChambres, String nomBloc) {
         //La recuperation
@@ -27,5 +37,10 @@ public class ChambreServiceImpl implements IChambreService{
         }
         //Persistance
         return chambreRepo.saveAll(chambreList);
+    }
+
+    @Override
+    public Chambre findChambreByNumChambre(Long numChambre) {
+        return chambreRepo.findChambreByNumChambre(numChambre);
     }
 }

@@ -11,6 +11,7 @@ import java.util.Set;
 @Getter
 @Setter
 public class Chambre {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long idChambre;
     @Column
