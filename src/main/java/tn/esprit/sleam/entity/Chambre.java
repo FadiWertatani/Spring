@@ -1,5 +1,6 @@
 package tn.esprit.sleam.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +19,7 @@ public class Chambre {
     Long numChambre;
     @Enumerated(EnumType.STRING)
     TypeChambre typeChambre;
+    @JsonIgnore
     @ManyToOne
     Bloc bloc;
     @OneToMany

@@ -4,11 +4,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.sleam.entity.Bloc;
 import tn.esprit.sleam.entity.Chambre;
-import tn.esprit.sleam.entity.Cours;
-import tn.esprit.sleam.entity.User;
 import tn.esprit.sleam.repository.IBlocRepo;
 import tn.esprit.sleam.repository.IChambreRepo;
-import tn.esprit.sleam.repository.IUserRepo;
 
 import java.util.List;
 
