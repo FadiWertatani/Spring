@@ -43,4 +43,9 @@ public class ChambreServiceImpl implements IChambreService{
     public Chambre findChambreByNumChambre(Long numChambre) {
         return chambreRepo.findChambreByNumChambre(numChambre);
     }
+
+    @Override
+    public List<Chambre> findChambreByNomUniversite(String nomUniversite) {
+        return chambreRepo.findChambresByBlocFoyerUniversiteNomUniversite(nomUniversite);
+    }
 }

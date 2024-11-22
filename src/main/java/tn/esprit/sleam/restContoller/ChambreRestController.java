@@ -28,4 +28,9 @@ public class ChambreRestController {
         return chambreService.findChambreByNumChambre(numCh);
     }
 
+    @GetMapping("/find-chambre-by-nom-universite/{nom}")
+    List<Chambre> findChambresByNomUni(@PathVariable String nom){
+        return chambreService.findChambreByNomUniversite(nom);
+    }
+
 }

@@ -13,4 +13,6 @@ public interface IChambreRepo extends JpaRepository<Chambre, Long> {
 
     Chambre findChambreByNumChambre(Long numChambre);
 
+    List<Chambre> findChambresByBlocFoyerUniversiteNomUniversite(String nomUniversite);
+
 }

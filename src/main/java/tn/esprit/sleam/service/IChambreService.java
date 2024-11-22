@@ -13,4 +13,6 @@ public interface IChambreService {
 
     Chambre findChambreByNumChambre(Long numChambre);
 
+    List<Chambre> findChambreByNomUniversite(String nomUniversite);
+
 }
