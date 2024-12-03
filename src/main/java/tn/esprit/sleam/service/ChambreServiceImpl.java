@@ -1,6 +1,8 @@
 package tn.esprit.sleam.service;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import tn.esprit.sleam.entity.Bloc;
 import tn.esprit.sleam.entity.Chambre;
@@ -10,6 +12,7 @@ import tn.esprit.sleam.repository.IChambreRepo;
 import java.util.List;
 
 @Service
+@Slf4j
 @AllArgsConstructor
 public class ChambreServiceImpl implements IChambreService{
     IChambreRepo chambreRepo;
@@ -45,4 +48,11 @@ public class ChambreServiceImpl implements IChambreService{
     public List<Chambre> findChambreByNomUniversite(String nomUniversite) {
         return chambreRepo.findChambresByBlocFoyerUniversiteNomUniversite(nomUniversite);
     }
+
+    @Scheduled(fixedRate = 5000)
+    void testScheduler(){
+        log.info("Test de declenchement");
+    }
+
+
 }
