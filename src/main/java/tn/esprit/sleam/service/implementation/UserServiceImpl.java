@@ -1,4 +1,4 @@
-package tn.esprit.sleam.service;
+package tn.esprit.sleam.service.implementation;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -6,10 +6,10 @@ import tn.esprit.sleam.entity.Cours;
 import tn.esprit.sleam.entity.User;
 import tn.esprit.sleam.repository.ICoursRepo;
 import tn.esprit.sleam.repository.IUserRepo;
+import tn.esprit.sleam.service.interafce.IUserService;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 @Service
 @AllArgsConstructor

@@ -3,7 +3,7 @@ package tn.esprit.sleam.restContoller;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.sleam.entity.User;
-import tn.esprit.sleam.service.IUserService;
+import tn.esprit.sleam.service.interafce.IUserService;
 
 import java.util.List;
 import java.util.Optional;

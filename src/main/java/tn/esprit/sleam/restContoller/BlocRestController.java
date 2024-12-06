@@ -3,7 +3,7 @@ package tn.esprit.sleam.restContoller;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.sleam.entity.Bloc;
-import tn.esprit.sleam.service.IBlocService;
+import tn.esprit.sleam.service.interafce.IBlocService;
 
 import java.util.List;
 import java.util.Optional;

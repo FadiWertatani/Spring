@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import tn.esprit.sleam.entity.Cours;
-import tn.esprit.sleam.entity.User;
-import tn.esprit.sleam.service.ICoursService;
+import tn.esprit.sleam.service.interafce.ICoursService;
 
 import java.util.List;
 

@@ -3,7 +3,7 @@ package tn.esprit.sleam.restContoller;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.sleam.entity.Chambre;
-import tn.esprit.sleam.service.IChambreService;
+import tn.esprit.sleam.service.interafce.IChambreService;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -1,9 +1,10 @@
-package tn.esprit.sleam.service;
+package tn.esprit.sleam.service.implementation;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.sleam.entity.Bloc;
 import tn.esprit.sleam.repository.IBlocRepo;
+import tn.esprit.sleam.service.interafce.IBlocService;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package tn.esprit.sleam.service;
+package tn.esprit.sleam.service.interafce;
 
 import tn.esprit.sleam.entity.Bloc;
 

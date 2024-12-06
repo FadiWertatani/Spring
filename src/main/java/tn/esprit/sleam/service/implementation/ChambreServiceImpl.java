@@ -1,4 +1,4 @@
-package tn.esprit.sleam.service;
+package tn.esprit.sleam.service.implementation;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -9,6 +9,7 @@ import tn.esprit.sleam.entity.Chambre;
 import tn.esprit.sleam.entity.Reservation;
 import tn.esprit.sleam.repository.IBlocRepo;
 import tn.esprit.sleam.repository.IChambreRepo;
+import tn.esprit.sleam.service.interafce.IChambreService;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,7 +18,7 @@ import java.util.List;
 @Service
 @Slf4j
 @AllArgsConstructor
-public class ChambreServiceImpl implements IChambreService{
+public class ChambreServiceImpl implements IChambreService {
     IChambreRepo chambreRepo;
     IBlocRepo blocRepo;
     List<Chambre> chambreList = null;
