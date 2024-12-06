@@ -6,9 +6,12 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import tn.esprit.sleam.entity.Bloc;
 import tn.esprit.sleam.entity.Chambre;
+import tn.esprit.sleam.entity.Reservation;
 import tn.esprit.sleam.repository.IBlocRepo;
 import tn.esprit.sleam.repository.IChambreRepo;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -49,7 +52,22 @@ public class ChambreServiceImpl implements IChambreService{
         return chambreRepo.findChambresByBlocFoyerUniversiteNomUniversite(nomUniversite);
     }
 
-    @Scheduled(fixedRate = 5000)
+    @Override
+    public List<Chambre> findChambreNotReservedByCurrentYear(Date annee) {
+        List<Chambre> chambres = chambreRepo.findAll();
+        List<Chambre> empty = new ArrayList<>();
+        List<Reservation> reservations = new ArrayList<>();
+        for(Chambre c : chambres){
+            for (Reservation reservation : c.getReservations()){
+                if((reservation.getIsValide() == true) && reservation.getAnneeUniversitaire().getYear() == annee.getYear()){
+                    empty.add(c);
+                }
+            }
+        }
+        return empty;
+    }
+
+    @Scheduled(cron = "*/5 * * * * *")
     void testScheduler(){
         log.info("Test de declenchement");
     }
