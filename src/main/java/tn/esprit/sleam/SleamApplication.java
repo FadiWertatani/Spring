@@ -6,7 +6,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy   //Pour activer le AOP
 @SpringBootApplication
 public class SleamApplication {
 
